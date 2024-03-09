@@ -17,17 +17,16 @@ main{
 section:first-child{
     margin-left: 240px;
 }
-#cajatext{
+.cajatext{
     display: block;
     border: none;
     background-color: #f3f5fc;
     width: 577px;
     height: 48px;
-    margin: 80px 0 300px 0;
+    margin: 70px 0 400px 0;
 }
 .cajadetexto p{
     display: inline;
-    margin-top: 851px;
 }
 .botones{
     width: 600px;
@@ -58,25 +57,22 @@ section:first-child{
     margin: 0 20px 0 150px;
     padding: 30px;
 }
-.contenedormuneco p{
-
-}
 .contenedormuneco img{
     width: 250px;
     margin: 80px 0 32px 0;
 }
 .copiarresultado{
-    margin-top: 5px;
-    width: 250px;
+    margin-top: 15px;
+    position: relative;
+    top: 480px;
+    width: 100%;
     height: 50px;
     border-radius: 24px;
     background-color: #f3f5fc;
     color: #0A3871;
-    bottom: 10px;
-    right: 15px;
 }
 
-@media all and (max-width: 1440px){
+@media all and (max-width: 1441px){
     section:first-child{
         margin-left: 100px;
     }
@@ -85,16 +81,16 @@ section:first-child{
         height: 50px;
     }
     .contenedormuneco{
-    margin: 0 20px 0 20px ;
-    width: 220px;
-    min-height: 550px;
+        margin: 0 20px 0 20px ;
+        width: 220px;
+        min-height: 550px;
     }
     .contenedormuneco img{
         width: 220px;
         margin: 80px 0 32px 0;
     }
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 769px){
     #logo{
         margin: 0 0 0 30px;
     }
@@ -109,18 +105,57 @@ section:first-child{
     }
     .botones button{
         margin: 0;
+        width: 280px;
+        height: 57px;
     }
     .contenedormuneco{
         width: 540px;
-        height: 100px;
+        min-height: initial;
         max-height: auto;
         margin: 20px 60px 20px 70px;
     }
     .contenedormuneco img{
         display: none;
     }
+    .contenedormuneco p{
+        margin: 5px;
+    }
     .copiarresultado{
-        margin: px;
         position: static;
+        margin: 5px 0 0 0;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 376px){
+    header{
+        position: static;
+    }
+    section:first-child{
+        margin: 0 0 0 16px;
+
+    }
+    .botones{
+        margin: 0;
+        width: 343px;
+        display: block;
+        justify-content: center;
+    }
+    .botones button{
+        margin: 0;
+        width: 343px;
+        height: 57px;
+    }
+    .contenedormuneco{
+        margin: 0 0 0 8px;
+        width: 330px;
+        padding: 15px
+    }
+    .cajatext{
+        margin: 10px 0 200px 0;
+        width: 343px;
+    }
+    .cajadetexto{
+        margin-left: 0;
     }
 }
