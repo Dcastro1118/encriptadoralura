@@ -45,7 +45,7 @@ function validarEntrada() {
     obtenerTexto();
     var textoValido = /^[a-z\s]+$/;
     if (textoValido.test(entradatexto)) {
-        alert("Texto encriptado!");
+        alert("Transformando el texto.");
         return true;
     } else {
         alert("Ingrese texto en minúsculas, sin acentos y sin caracteres especiales.");
