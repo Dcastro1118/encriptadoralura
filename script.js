@@ -11,20 +11,24 @@ botondesencriptar.onclick = desencriptar;
 botoncopiar.onclick = copiar;
 
 function encriptar() {
-    validarEntrada();
-    ocultarrelleno();
+    if (!validarEntrada()) {
+        return;
+    }
+    ocultarRelleno();
     mostrarCopiar();
-    obtenertexto();
-    resultado.textContent = encriptartexto(entradatexto);
+    obtenerTexto();
+    resultado.textContent = encriptarTexto(entradatexto);
     botoncopiar.textContent = "Copiar";
 }
 
 function desencriptar() {
-    validarEntrada();
-    ocultarrelleno();
+    if (!validarEntrada()) {
+        return; // Detiene la ejecución de la función si validarEntrada devuelve false
+    }
+    ocultarRelleno();
     mostrarCopiar();
-    obtenertexto();
-    resultado.textContent = desencriptartexto(entradatexto);
+    obtenerTexto();
+    resultado.textContent = desencriptarTexto(entradatexto);
     botoncopiar.textContent = "Copiar";
 }
 function copiar() {
@@ -36,7 +40,7 @@ function mostrarCopiar() {
     botoncopiar.removeAttribute('hidden');
 }
 function validarEntrada() {
-    obtenertexto();
+    obtenerTexto();
     var textoValido = /^[a-z\s]+$/;
     if (textoValido.test(entradatexto)) {
         alert("Texto encriptado!");
@@ -44,16 +48,16 @@ function validarEntrada() {
         alert("Ingrese texto en minúsculas, sin acentos y sin caracteres especiales.");
     }
 }
-function ocultarrelleno() {
+function ocultarRelleno() {
     muneco.setAttribute('hidden', 'true');
     contenedor.setAttribute('hidden', 'true');
 }
 
-function obtenertexto() {
+function obtenerTexto() {
     entradatexto = document.querySelector(".cajatext").value;
 }
 
-function encriptartexto(entradatexto) {
+function encriptarTexto(entradatexto) {
     var textoencriptado = "";
     for (let i = 0; i < entradatexto.length; i++) {
         if (entradatexto[i] == "a") {
@@ -73,7 +77,7 @@ function encriptartexto(entradatexto) {
     return textoencriptado;
 }
 
-function desencriptartexto(entradatexto) {
+function desencriptarTexto(entradatexto) {
     var textodesencriptado = "";
     for (let i = 0; i < entradatexto.length; i++) {
         if (entradatexto[i] == "z" && entradatexto[i+1] == "x" && entradatexto[i+2] == "c") {
