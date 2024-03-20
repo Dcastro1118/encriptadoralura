@@ -1,14 +1,11 @@
-header{
-    position: absolute;
-}
 body{
     font-family: "Inter", sans-serif;
     position: relative;
-    margin: 40px 0 0 0;
+    margin: 0 0 0 0;
     background-color: #f3f5fc;
 }
-#logo{
-    margin: 0 0 0 40px; 
+.logo{
+    margin: 15px 0 0 40px; 
 }
 main{
     display: flex;
@@ -23,7 +20,7 @@ section:first-child{
     background-color: #f3f5fc;
     width: 577px;
     height: 48px;
-    margin: 70px 0 400px 0;
+    margin: 70px 0 300px 0;
 }
 .cajadetexto p{
     display: inline;
@@ -39,14 +36,20 @@ section:first-child{
     border-radius: 24px;
     background-color: #f3f5fc;
     color: #0A3871;
-    padding: auto;
     margin: 0 0 0 0;
+    transition: 0.5s;
+}
+.botones button:hover{
+    width: 330px;
+    height: 60px;
+
 }
 .botones button:first-child{
     background-color: #0A3871;
     color: #f3f5fc;
 }
 .contenedormuneco{
+    position: relative;
     width: 270px;
     min-height: 550px;
     max-height: auto;
@@ -61,21 +64,31 @@ section:first-child{
     width: 250px;
     margin: 80px 0 32px 0;
 }
+.textoresultado{
+    max-width: 240px;
+    
+}
 .copiarresultado{
     margin-top: 15px;
-    position: relative;
-    top: 480px;
-    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    margin: auto;
     height: 50px;
     border-radius: 24px;
     background-color: #f3f5fc;
     color: #0A3871;
+    transition: 0.5s;
+}
+.copiarresultado:hover{
+    width: 72%;
+    height: 52px;
 }
 
 @media all and (max-width: 1441px){
-    section:first-child{
-        margin-left: 100px;
-    }
+
     .botones button{
         width: 250px;
         height: 50px;
@@ -89,42 +102,74 @@ section:first-child{
         width: 220px;
         margin: 80px 0 32px 0;
     }
-}
+    .botones button:hover{
+        width: 265px;
+        height: 55px;
+    }
+
 @media all and (max-width: 769px){
-    #logo{
-        margin: 0 0 0 30px;
+    .logo{
+        margin: 15px 0 0 30px;
     }
     main{
         display: block;
+        align-items: center;
+    }
+    main{
+        width: 100vw;
     }
     section:first-child{
-        margin-left: 70px;
+        width: 90%;
+        margin: auto;
     }
     .botones{
         justify-content: space-evenly;
+        width: 100%;
     }
     .botones button{
         margin: 0;
         width: 280px;
         height: 57px;
     }
+    .botones button:hover{
+        width: 300px;
+        height: 60px;
+    }
+    .cajadetexto{
+        margin-left: 0px;
+    
+    }
+    .cajatext{
+        width: 100%;
+    }
     .contenedormuneco{
-        width: 540px;
-        min-height: initial;
-        max-height: auto;
-        margin: 20px 60px 20px 70px;
+        position: static;
+        display: flex;
+        align-items: center;       
+        flex-direction: column;
+        width: 90%;
+        min-height: max-content;
+        margin: 20px auto;
+        padding: 0;
     }
     .contenedormuneco img{
         display: none;
     }
-    .contenedormuneco p{
-        margin: 5px;
-    }
     .copiarresultado{
+        transform: translateX(0%);
         position: static;
-        margin: 5px 0 0 0;
-        width: 100%;
+        margin: 10px auto;
+        width: 50%;
     }
+    .copiarresultado:hover{
+        width: 52%;
+    }
+    .textoresultado{
+        position: static;
+        margin: 15px auto;
+        
+    }
+}
 }
 
 @media all and (max-width: 376px){
@@ -146,6 +191,10 @@ section:first-child{
         width: 343px;
         height: 57px;
     }
+    .botones button:hover{
+        width: 348px;
+        height: 60px;
+    }
     .contenedormuneco{
         margin: 0 0 0 8px;
         width: 330px;
@@ -157,5 +206,8 @@ section:first-child{
     }
     .cajadetexto{
         margin-left: 0;
+    }
+    .copiarresultado{
+        width: 70%;
     }
 }
