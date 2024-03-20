@@ -23,7 +23,7 @@ function encriptar() {
 
 function desencriptar() {
     if (!validarEntrada()) {
-        return; // Detiene la ejecución de la función si validarEntrada devuelve false
+        return; 
     }
     ocultarRelleno();
     mostrarCopiar();
@@ -44,8 +44,10 @@ function validarEntrada() {
     var textoValido = /^[a-z\s]+$/;
     if (textoValido.test(entradatexto)) {
         alert("Texto encriptado!");
+        return true;
     } else {
         alert("Ingrese texto en minúsculas, sin acentos y sin caracteres especiales.");
+        return false;
     }
 }
 function ocultarRelleno() {
