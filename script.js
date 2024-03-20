@@ -11,21 +11,27 @@ botondesencriptar.onclick = desencriptar;
 botoncopiar.onclick = copiar;
 
 function encriptar() {
-    if (validarEntrada()) {
-        ocultarrelleno();
-        mostrarCopiar();
-        obtenertexto();
-        resultado.textContent = desencriptartexto(entradatexto);
-        botoncopiar.textContent = "Copiar";;
+    if (!validarEntrada()) {
+        return;
+    }
+
+    ocultarRelleno();
+    mostrarCopiar();
+    obtenerTexto();
+    resultado.textContent = encriptarTexto(entradatexto);
+    botoncopiar.textContent = "Copiar";
 }
 
 function desencriptar() {
-    if (validarEntrada()) {
-        ocultarrelleno();
-        mostrarCopiar();
-        obtenertexto();
-        resultado.textContent = desencriptartexto(entradatexto);
-        botoncopiar.textContent = "Copiar";
+    if (!validarEntrada()) {
+        return; 
+    }
+
+    ocultarRelleno();
+    mostrarCopiar();
+    obtenerTexto();
+    resultado.textContent = desencriptarTexto(entradatexto);
+    botoncopiar.textContent = "Copiar";
 }
 function copiar() {
     let copiar = document.querySelector(".textoresultado");
